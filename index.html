@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="inputText"/><input type="button" id="findText" value="Find" onclick="showText()"/><br/>
+<div id="showMessage"></div>
+
+<script>
+    let arrayEnglish = ["Red","Green","White","Black","Blue","Yellow","Dog","Cat"];
+    let arrayTiengViet = ["Do","Luc","Trang","Den","Lam","Vang","Cho","Meo"];
+    let str = document.getElementById('inputText');
+    let show;
+
+    function showText() {
+        for (i=0;i<arrayEnglish.length;i++){
+            if(str.value == arrayEnglish[i]){
+                document.getElementById('showMessage').innerHTML = arrayEnglish[i]+' = '+arrayTiengViet[i];
+                break;
+            }else{
+                document.getElementById('showMessage').innerHTML = 'không tìm thấy "'+str.value+'"';
+                break;
+            }
+        }
+    }
+</script>
+</body>
+</html>
